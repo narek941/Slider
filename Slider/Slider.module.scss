@@ -1,0 +1,67 @@
+.slider {
+  &_item {
+    width: 100%;
+    cursor: grab;
+    flex-shrink: 0;
+  }
+
+  &_img {
+    width: 100%;
+    height: 100%;
+    user-select: none;
+    object-fit: cover;
+  }
+
+  &_container {
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    overflow: hidden;
+    position: relative;
+    touch-action: pan-y;
+    border-radius: 6px;
+  }
+
+  &_list {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    transition: transform 0.3s ease-out;
+
+    //// Passing Style
+    &__mute {
+      right: 30px !important;
+      width: unset !important;
+    }
+
+    &__is_swiping {
+      transition: none;
+    }
+  }
+
+  &_indicator {
+    padding: 0;
+    width: 100%;
+    bottom: 10px;
+    display: flex;
+    list-style: none;
+    margin: 15px 0 0 0;
+    position: absolute;
+    justify-content: center;
+
+    &_item {
+      width: 12px;
+      height: 12px;
+      margin: 0 4px;
+      cursor: pointer;
+      color: #cccccc;
+      border-radius: 50%;
+
+      &__active {
+        color: black;
+      }
+    }
+  }
+}
